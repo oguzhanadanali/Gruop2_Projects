@@ -37,5 +37,8 @@ public class Tasks {
         System.out.println(x);
         System.out.println(ch);
 
+        double kare=Math.pow(2,3);
+        System.out.println(kare);
+
     }
 }
