@@ -1,6 +1,6 @@
 package day11;
 
-public class Orenkler2 {
+public class Ornekler2 {
     public static void main(String[] args) {
         int sayi=21;
         int tahmin=18;
