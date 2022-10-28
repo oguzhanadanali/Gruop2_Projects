@@ -54,7 +54,12 @@ public class Task1 {
                         break;
                     case "3":
                         //Daire
+                        System.out.print("Dairenin Yarıçapı = ");
+                        int r=new Scanner(System.in).nextInt();
 
+                        //                --.--
+                        System.out.printf("Alan =%5.2f",Math.PI*r*r);
+                        System.out.printf("Çevre =%5.2f",2*Math.PI*r);
                         break;
                     case "Q":
                         System.out.println("Programdan çıkıldı.");
