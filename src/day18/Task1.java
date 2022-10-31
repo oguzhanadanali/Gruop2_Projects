@@ -6,6 +6,7 @@ public class Task1 {
 
     public static void main(String[] args) {
 
+
         String secim=showMainMenu().toUpperCase();
         switch (secim){
             case "1":
@@ -46,11 +47,13 @@ public class Task1 {
                         System.out.printf("Alan =%5d\n",alan);
                         int cevre=cevreHesapla(uKenar,kKenar);
                         System.out.printf("Çevre=%5d\n",cevre);
-
                         break;
                     case "2":
                         //Kare
-
+                        System.out.print("Karenin Kenarı = ");
+                        int kenar=new Scanner(System.in).nextInt();
+                        System.out.printf("Alan =%5d\n",kenar*kenar);
+                        System.out.printf("Çevre =%5d\n",4*kenar);
                         break;
                     case "3":
                         //Daire
@@ -60,6 +63,7 @@ public class Task1 {
                         //                --.--
                         System.out.printf("Alan =%5.2f",Math.PI*r*r);
                         System.out.printf("Çevre =%5.2f",2*Math.PI*r);
+                        int k,l,m;
                         break;
                     case "Q":
                         System.out.println("Programdan çıkıldı.");
