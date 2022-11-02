@@ -12,6 +12,7 @@ public class Main {
         int[] sayilar={1,3,5,7,9};
         Scanner input=new Scanner(System.in);
         double[] notlar;
+        notlar=new double[5];
         double[] fizikNotlari=new double[100];
 
         System.out.println(""+x);

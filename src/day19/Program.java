@@ -24,5 +24,6 @@ public class Program {
             System.out.print(sayilar[i]+" ");
         }
 
+
     }
 }
