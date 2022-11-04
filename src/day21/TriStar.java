@@ -23,5 +23,8 @@ public class TriStar {
             System.out.println();
         }//Maliyeti: O(nxn)
 
+
+
+
     }
 }
