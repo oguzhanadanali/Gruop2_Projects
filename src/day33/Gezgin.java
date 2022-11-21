@@ -4,7 +4,12 @@ public class Gezgin {
     private int[] gittigiYol;
 
 
-    public int[] addYol(int km){
+
+    public int[] getYolListesi(){
+        return gittigiYol;
+    }
+
+    public int addYol(int km){
 
         if (gittigiYol==null){
             gittigiYol=new int[1];
@@ -23,6 +28,11 @@ public class Gezgin {
 
         }
 
-        return gittigiYol;
+        int toplam=0;
+        for (int i = 0; i < gittigiYol.length; i++) {
+            toplam+=gittigiYol[i];
+        }
+
+        return toplam;
     }
 }

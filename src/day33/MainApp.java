@@ -6,6 +6,7 @@ public class MainApp {
         //Tek boyutlu diziler - Vektör
 
         String[] isimler;
+
         int[] sayilar={1,2,3,5,9};
         int[] numbers=new int[5];
         numbers[0]=1;
