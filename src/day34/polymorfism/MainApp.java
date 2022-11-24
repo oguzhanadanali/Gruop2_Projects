@@ -10,6 +10,7 @@ public class MainApp {
          */
 
         Kare kare=new Kare(9);
+
         System.out.println("Karenin Alanı   = "+kare.alanHesapla());
         System.out.println("Karenin Çevresi = "+kare.cevreHesapla());
         System.out.println();
@@ -41,4 +42,8 @@ public class MainApp {
         }
 
     }
+
+
+
+
 }
