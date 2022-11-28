@@ -10,7 +10,7 @@ public class MainApp2 {
         String str4=new String("Java");
         String str5=new String("C++");
         String str6=new String("Data Science");
-        String str7=new String("data Science").intern();
+        String str7=new String("Data Science").intern();
         String str8=new String("Python");
 
 
