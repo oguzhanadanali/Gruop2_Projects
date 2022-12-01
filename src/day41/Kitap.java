@@ -2,10 +2,10 @@ package day41;
 
 import org.jetbrains.annotations.NotNull;
 
-public class Kitap implements Comparable<Kitap> {
+public class Kitap implements Comparable<Kitap>,Cloneable {
     private String adi;
     private String yazari;
-    private int sayfa;
+    private Integer sayfa;
 
     public Kitap(String adi, String yazari, int sayfa) {
         this.adi = adi;
@@ -40,6 +40,16 @@ public class Kitap implements Comparable<Kitap> {
         this.sayfa = sayfa;
     }
 
+
+    @Override
+    public Kitap clone() {
+
+        Kitap k=new Kitap(adi,yazari,sayfa);
+
+
+        return k;
+    }
+
     @Override
     public String toString() {
         return "Kitap{" +
@@ -49,8 +59,14 @@ public class Kitap implements Comparable<Kitap> {
                 '}';
     }
 
+/*    @Override
+    public int compareTo(@NotNull Kitap o) {
+        return this.sayfa.compareTo(o.sayfa);
+    }*/
+
     @Override
     public int compareTo(@NotNull Kitap o) {
+
         return this.adi.compareTo(o.adi);
     }
 
