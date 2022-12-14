@@ -2,6 +2,9 @@ package day48.editor;
 
 import javax.swing.*;
 import java.awt.*;
+import java.io.*;
+import java.nio.charset.StandardCharsets;
+import java.util.Arrays;
 
 public class Editor extends JFrame {
     private JMenuBar menuCubugu;
@@ -61,12 +64,33 @@ public class Editor extends JFrame {
 
     private void dosyaKaydet() {
         JFileChooser fcKaydet=new JFileChooser();
-        fcKaydet.showSaveDialog(this);
+        if (fcKaydet.showSaveDialog(this)==JFileChooser.APPROVE_OPTION){
+            File selectedFile = fcKaydet.getSelectedFile();
+            try(FileOutputStream fos=new FileOutputStream(selectedFile)) {
+                String str=icerik.getText();
+                byte[] data = str.getBytes(StandardCharsets.UTF_8);
+                fos.write(data);
+            } catch (IOException e) {
+                JOptionPane.showMessageDialog(this,e.getMessage(),"Hata oluştu",JOptionPane.ERROR_MESSAGE);
+            }
+        }
     }
 
     private void dosyaAc() {
         JFileChooser fcAc=new JFileChooser();
-        fcAc.showOpenDialog(this);
+        if (fcAc.showOpenDialog(this)==JFileChooser.APPROVE_OPTION){
+            File selectedFile = fcAc.getSelectedFile();
+
+            try(FileInputStream fis=new FileInputStream(selectedFile)){
+                byte[] data = fis.readAllBytes();
+                String str= new String(data,StandardCharsets.UTF_8);
+
+                icerik.setText(str);
+            } catch (IOException e) {
+                JOptionPane.showMessageDialog(this,e.getMessage(),"Hata oluştu",JOptionPane.ERROR_MESSAGE);
+            }
+        }
+
     }
 
     private void cikisYap() {
