@@ -73,7 +73,7 @@ deposit: balanc+=amount
 witdraw: balance-=amount
 getBalance: return balance
 
-Task 22: withdraw medodunda eğer çekilecek miktar balance'tan fazla ise
+Task 22: withdraw metodunda eğer çekilecek miktar balance'tan fazla ise
 InsufficientBalanceException fırlatılmaldır. Bu hata metot içinde yönetilmemelidir.
 
 Task 23: Main class - main metodu içerisinde bir adet Contact ve bir adet
