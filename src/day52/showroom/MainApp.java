@@ -23,8 +23,9 @@ public class MainApp {
         ShowRoom showRoom = new ShowRoom();
 
 
+        Car car2=new Car(2, "Araba 2");
         showRoom.add(new Car(1, "Araba 1"));
-        showRoom.add(new Car(2, "Araba 2"));
+        showRoom.add(car2);
         showRoom.add(new Car(3, "Araba 3"));
         System.out.println("Capacity : " + showRoom.capacity());
         System.out.println("Size : " + showRoom.size());
@@ -42,6 +43,21 @@ public class MainApp {
             System.out.println(iterator.next());
         }
 
+        System.out.println();
+        //showRoom.remove(1);
+        //showRoom.remove(car2);
+        showRoom.remove(new Car(1, "Araba 1"));
+        System.out.println("Capacity : " + showRoom.capacity());
+        System.out.println("Size : " + showRoom.size());
+
+        iterator = showRoom.iterator();
+        while (iterator.hasNext()){
+            System.out.println(iterator.next());
+        }
+
+/*
+
+
         System.out.println(iterator.next());
         System.out.println(iterator.next());
         System.out.println(iterator.next());
@@ -49,7 +65,7 @@ public class MainApp {
         System.out.println(iterator.next());
         System.out.println(iterator.next());
         System.out.println(iterator.next());
-        System.out.println(iterator.next());
+        System.out.println(iterator.next());*/
 
         //showRoom.forEach(item-> System.out.println(item));
 

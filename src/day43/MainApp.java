@@ -12,7 +12,9 @@ public class MainApp {
          */
         //Sıfıra bölme hatası
 
+        //TODO: Buraya çalış
         int x=7;
+
         int y=0;
         try {
             System.out.println("Sonuç = "+(x/y));
