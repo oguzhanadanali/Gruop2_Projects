@@ -17,7 +17,7 @@ public class MainApp1 {
         System.out.println(head);
 
 
-        List<Urun> tail2 = stok1.tail(-2);
+        List<Urun> tail2 = stok1.tail();
         System.out.println(tail2);
 
     }

@@ -54,7 +54,7 @@ public class Stok extends ArrayList<Urun> {
     }
 
     public List<Urun> tail(){
-        return stream().skip(5).toList();
+        return tail(5);
     }
 
 }
