@@ -53,6 +53,57 @@ public class MainApp {
             System.out.print(iterator.next()+" ");
         }
 
+        System.out.println();
+        System.out.println("--------------------------");
+/*        Object[] objects = numbers.toArray();
 
+        System.out.println(Arrays.toString(objects));*/
+
+        int[] dizi={1,2,3,4,5,3,5,5,6,1,2};
+
+
+
+        long count = Arrays.stream(dizi).count();
+        long dist = Arrays.stream(dizi).distinct().count();
+
+
+        System.out.println("Eleman Sayısı = "+count);
+        System.out.println("Distinct adedi = "+dist);
+
+        Integer[] integers1 = numbers.toArray(new Integer[0]);
+        int sum = Arrays.stream(integers1).mapToInt(Integer::intValue).sum();
+        double average = Arrays.stream(integers1).mapToDouble(Integer::intValue).average().getAsDouble();
+        System.out.printf("Toplam = %d\tOrtalama = %5.2f\n",sum,average);
+
+
+
+
+        numbers.set(0,-5);
+        System.out.println("-----------------");
+
+        System.out.println(numbers);
+
+        System.out.println("-----------------");
+
+        numbers.set(0,null);
+        Integer remove = numbers.remove(0);
+        System.out.println("Silinen Nesne (Sayı)  :"+remove);
+
+        System.out.println(numbers);
+
+        if (numbers.remove((Integer) 1)){
+            System.out.println("Sayı silindi.");
+        }else {
+            System.out.println("Sayı silinemedi.");
+        }
+
+        System.out.println(numbers);
+
+
+/*        numbers.removeAll(List.of(1));
+        System.out.println(numbers);*/
+
+        numbers.removeIf(item->item==1);
+        System.out.println(numbers);
     }
 }
