@@ -28,6 +28,9 @@ public class MainApp {
         Map<Integer,String> aylar=new HashMap<>();
         aylar.put(1,"Ocak");
         aylar.put(2,"Şubat");
+
+
+
         aylar.put(3,"Mart");
         aylar.put(4,"Nisan");
         aylar.put(5,"Mayıs");
@@ -41,17 +44,24 @@ public class MainApp {
 
         System.out.println(aylar);
 
+
+
+
         System.out.println("---------------------------");
-        Set<Integer> integers = aylar.keySet();
-        integers.forEach(k-> System.out.println(k));
+        Set<Integer> keys = aylar.keySet();
+        System.out.println(keys);
+        //keys.forEach(k-> System.out.println(k));
+
         System.out.println("------------------------------------");
         Collection<String> values = aylar.values();
-        values.forEach(System.out::println);
+        System.out.println(values);
+        //values.forEach(System.out::println);
         System.out.println("-------------------------------------");
         Set<Map.Entry<Integer, String>> entries = aylar.entrySet();
-        entries.forEach(e->{
+        System.out.println(entries);
+/*        entries.forEach(e->{
             System.out.printf("%d ----> %s\n",e.getKey(),e.getValue());
-        });
+        });*/
 
     }
 }
