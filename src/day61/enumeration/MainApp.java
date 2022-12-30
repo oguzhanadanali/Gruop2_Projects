@@ -1,5 +1,7 @@
 package day61.enumeration;
 
+import java.util.Scanner;
+
 public class MainApp {
     public static void main(String[] args) {
         Yon yon=Yon.BATI;
@@ -23,6 +25,8 @@ public class MainApp {
         for(var y:yonler){
             System.out.println(y);
         }
+
+        Scanner input=new Scanner(System.in);
 
 
 
